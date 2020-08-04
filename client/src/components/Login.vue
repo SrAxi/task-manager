@@ -14,7 +14,7 @@
                   </v-btn>
                 </template>
                 <span>Source</span>
-              </v-tooltip> -->
+              </v-tooltip>-->
             </v-toolbar>
             <v-card-text>
               <v-form>
@@ -73,14 +73,12 @@ export default {
 
   methods: {
     async submitLogin() {
-      console.log('SUBMITTING FORM', this.email, this.password)
 
       try {
         const { data } = await this.apiLogin({
           email: this.email,
           password: this.password
         })
-        console.log('login', data)
         this.saveUserData(data)
         this.loginHandler(true)
       } catch (error) {

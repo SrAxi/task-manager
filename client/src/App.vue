@@ -80,14 +80,9 @@ export default {
   },
   methods: {
     async logout() {
-      console.log('logging out from App')
-
       try {
-        const { data } = await this.apiLogout()
-
-        console.log('logout', data)
+        await this.apiLogout()
         this.isUserLoggedIn = false
-
         this.saveUserData(null)
       } catch (error) {
         this.handleError(error)

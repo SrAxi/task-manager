@@ -92,8 +92,6 @@ export default {
 
   methods: {
     async submitLogin() {
-      console.log('SUBMITTING FORM', this.email, this.password)
-
       try {
         const { data } = await this.apiRegister({
           email: this.email,
@@ -101,7 +99,6 @@ export default {
           age: this.age,
           password: this.password
         })
-        console.log('login', data)
         this.saveUserData(data)
         this.loginHandler(true)
         this.handleShowLogin()
