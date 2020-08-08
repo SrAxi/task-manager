@@ -10,5 +10,9 @@ NodeJs Task Manager REST API
 - Mongoose
 - MongoDB
 
+### FE Stack
+- Vue
+- Vuetify
+
 ### APIs
 - [Sendgrid](https://sendgrid.com/)
